@@ -1,12 +1,17 @@
-import React from 'react'
-import classes from './EnvironmentVariableEdit.module.css'
+import React from 'react';
+import classes from './EnvironmentVariableEdit.module.css';
 
 const EnvironmentVariableEdit = () => {
   return (
-    <div>
-      this is edit page!
+    <div className={classes.main}>
+      Name:
+      <input type="text" />
+      Value: <input type="number" />
+      <button>Delete</button>
+      <button>Cancle</button>
+      <button>Add</button>
     </div>
-  )
-}
+  );
+};
 
-export default EnvironmentVariableEdit
+export default EnvironmentVariableEdit;
