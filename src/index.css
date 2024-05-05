@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+p, span , h1, h2, h3, h4, h5, label {
+  margin: 0;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

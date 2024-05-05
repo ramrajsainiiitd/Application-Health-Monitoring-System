@@ -1,0 +1,47 @@
+.mainContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #ebebeb;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  padding: 16px 32px 0px 32px;
+  gap: 5px;
+}
+
+.main > span {
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 16px;
+  text-align: left;
+}
+
+.main > select {
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: -0.01em;
+  text-align: left;
+  background-color: #f8f8f8;
+  border: none;
+}
+
+.main>img {
+  width: 1.2rem;
+  height: 1.2rem;
+  padding: 0.2rem;
+}
+
+.profileImage {
+  display: flex;
+  align-items: center;
+  width: Fixed (162px) px;
+  height: Hug (40px) px;
+  gap: 16px;
+  padding: 16px 32px;
+}

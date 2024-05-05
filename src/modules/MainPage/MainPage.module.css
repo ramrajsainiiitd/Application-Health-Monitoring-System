@@ -1,0 +1,14 @@
+.main {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #f8f8f8;
+}
+
+.leftContainer {
+    width: 20%;
+}
+
+.rightContainer {
+    width: 80%;
+}

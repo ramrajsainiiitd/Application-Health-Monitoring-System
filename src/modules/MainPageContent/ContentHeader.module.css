@@ -1,0 +1,31 @@
+.main {
+  width: 95%;
+  height: Hug (26px) px;
+  gap: 8px;
+  opacity: 0px;
+  margin: 5px 30px;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+}
+.top > div {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+.top > div > span {
+  display: flex;
+  align-items: center;
+  background-color: #f0fcf9;
+  color: #00b88c;
+  border: 1px solid #00b88c;
+  width: Hug (95px) px;
+  height: Hug (26px) px;
+  padding: 3px 8px 3px 4px;
+  gap: 4px;
+  border-radius: 4px;
+}
+.bottom {
+  display: flex;
+}

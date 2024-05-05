@@ -1,0 +1,59 @@
+.tableContainer {
+  border: 0.1px solid #ebebeb;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+
+.tableRow {
+  width: 80%;
+  align-items: center;
+  border: 0.1px solid #ebebeb;
+  border-radius: 4px;
+  text-align: center;
+}
+.TableCell{
+  text-align: center;
+}
+.successful {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 3px 8px 3px 4px;
+  border-radius: 4px;
+  background-color: #f0fcf9;
+  color: #00b88c;
+  border: 1px solid #00b88c;
+  width: 6rem;
+}
+
+.failed {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 3px 8px 3px 4px;
+  border-radius: 4px;
+  opacity: 0px;
+  background-color: #fef4f2;
+  color: #e91f04;
+  border: 1px solid #e91f04;
+  width: 6rem;
+}
+
+.in_progress {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  gap: 0.2rem;
+  padding: 3px 8px 3px 4px;
+  border-radius: 4px;
+  background-color: #fef5e6;
+  color: #f39c12;
+  border: 1px solid #f39c12;
+  width: 6rem;
+}
