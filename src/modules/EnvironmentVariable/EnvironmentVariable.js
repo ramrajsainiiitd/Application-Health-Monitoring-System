@@ -13,7 +13,7 @@ function EnvironmentVariable() {
         if (storedEnvironmentVariable) {
             try {
                 const data = Array.isArray(storedEnvironmentVariable)
-                    ? storedData
+                    ? storedEnvironmentVariable
                     : Object.values(storedEnvironmentVariable);
                 setDataArray(data);
             } catch (error) {
