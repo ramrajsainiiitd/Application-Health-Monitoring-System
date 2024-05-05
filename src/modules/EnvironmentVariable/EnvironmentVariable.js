@@ -1,4 +1,5 @@
 import React from 'react';
+import {useState, useEffect} from 'react'
 import classes from './EnvironmentVariable.module.css';
 import PlusIcon from '../../assets/PlusIcon.svg';
 import DownloadIcon from '../../assets/downloadIcon.svg';
@@ -6,15 +7,26 @@ import EnvironmentVariableUploadFile from './EnvironmentVariableUploadFile';
 import EnvironmentVariableEdit from './EnvironmentVariableEdit';
 
 function EnvironmentVariable() {
-  const storedEnvironmentVariable = localStorage.getItem('Item');
-  const storedData = storedEnvironmentVariable
-    ? JSON.parse(storedEnvironmentVariable)
-    : [];
-  const dataArray = Array.isArray(storedData)
-    ? storedData
-    : Object.values(storedData);
-
-    console.log("stored data ",dataArray);
+  const [dataArray, setDataArray] = useState([]);
+    const fetchDataFromLocalStorage = () => {
+        const storedEnvironmentVariable = localStorage.getItem('Item');
+        if (storedEnvironmentVariable) {
+            try {
+                const data = Array.isArray(storedEnvironmentVariable)
+                    ? storedData
+                    : Object.values(storedEnvironmentVariable);
+                setDataArray(data);
+            } catch (error) {
+                console.error('Failed to parse JSON data from local storage:', error);
+                setDataArray([]);
+            }
+        } else {
+            setDataArray([]);
+        }
+    };
+    useEffect(() => {
+        fetchDataFromLocalStorage();
+    }, []);
   return (
     <div className={classes.main}>
       <div>
