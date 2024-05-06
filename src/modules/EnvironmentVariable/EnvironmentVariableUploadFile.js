@@ -3,59 +3,59 @@ import { useState } from 'react';
 import classes from './EnvironmentVariableUploadFile.module.css';
 
 const EnvironmentVariableUploadFile = () => {
-  const [fileName, setFileName] = useState('');
-  const [pdfBase64, setPdfBase64] = useState(null);
+  // const [fileName, setFileName] = useState('');
+  // const [pdfBase64, setPdfBase64] = useState(null);
 
-  const [selectedFileName, setSelectedFileName] = useState(null);
-  const handleFileChange = (event) => {
-    const file = event.target.files[0];
+  // const [selectedFileName, setSelectedFileName] = useState(null);
+  // const handleFileChange = (event) => {
+  //   const file = event.target.files[0];
 
-    if (file) {
-      setSelectedFileName(file.name);
-    } else {
-      setSelectedFileName(null);
-    }
-  };
+  //   if (file) {
+  //     setSelectedFileName(file.name);
+  //   } else {
+  //     setSelectedFileName(null);
+  //   }
+  // };
 
-  const handleAddFile = (event) => {
-    const file = event.target.files[0];
+  // const handleAddFile = (event) => {
+  //   const file = event.target.files[0];
 
-    if (file && file.type === 'application/pdf') {
-      const reader = new FileReader();
+  //   if (file && file.type === 'application/pdf') {
+  //     const reader = new FileReader();
 
-      reader.onload = () => {
-        const base64String = reader.result;
-        localStorage.setItem('pdfFile', base64String);
+  //     reader.onload = () => {
+  //       const base64String = reader.result;
+  //       localStorage.setItem('pdfFile', base64String);
 
-        setFileName(file.name);
-        setPdfBase64(base64String);
-      };
-      reader.readAsDataURL(file);
-    }
-  };
+  //       setFileName(file.name);
+  //       setPdfBase64(base64String);
+  //     };
+  //     reader.readAsDataURL(file);
+  //   }
+  // };
 
-  const retrievePdfFromLocalStorage = () => {
-    const storedPdf = localStorage.getItem('pdfFile');
-    setPdfBase64(storedPdf);
-  };
+  // const retrievePdfFromLocalStorage = () => {
+  //   const storedPdf = localStorage.getItem('pdfFile');
+  //   setPdfBase64(storedPdf);
+  // };
 
   return (
     <div className={classes.main}>
       <label className="upload-box">
-        {selectedFileName
+        {/* {selectedFileName
           ? `Selected file: ${selectedFileName}`
-          : 'Click or drag file(s) here to upload'}
+          : 'Click or drag file(s) here to upload'} */}
         <input
           type="file"
-          onChange={handleFileChange}
+          // onChange={handleFileChange}
           accept="application/pdf"
         />
       </label>
       <p>Upload a .env file. It should not be greater than 5KB.</p>
       <div>
         <button>Cancle</button>
-        <button onClick={handleAddFile}>Add</button>
-        <button onClick={retrievePdfFromLocalStorage}>GetFile</button>
+        <button >Add</button>
+        <button >GetFile</button>
       </div>
     </div>
   );

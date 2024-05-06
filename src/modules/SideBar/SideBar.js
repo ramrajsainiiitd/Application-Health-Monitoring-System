@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import classes from './SideBar.module.css';
 import KapstanLogo from '../../assets/KapstanLogoIcon.svg';
 import ApplicationIcon from '../../assets/ApplicatioIcon.svg';
-import Divider from '../../assets/Divider.svg';
 import ConnectionIcon from '../../assets/ConnectionIcon.svg';
 import CostIcon from '../../assets/CostIcon.svg';
 import SecurityIcon from '../../assets/SecurityIcon.svg';

@@ -3,30 +3,10 @@ import {useState, useEffect} from 'react'
 import classes from './EnvironmentVariable.module.css';
 import PlusIcon from '../../assets/PlusIcon.svg';
 import DownloadIcon from '../../assets/downloadIcon.svg';
-import EnvironmentVariableUploadFile from './EnvironmentVariableUploadFile';
-import EnvironmentVariableEdit from './EnvironmentVariableEdit';
+// import EnvironmentVariableUploadFile from './EnvironmentVariableUploadFile';
+// import EnvironmentVariableEdit from './EnvironmentVariableEdit';
 
 function EnvironmentVariable() {
-  const [dataArray, setDataArray] = useState([]);
-    const fetchDataFromLocalStorage = () => {
-        const storedEnvironmentVariable = localStorage.getItem('Item');
-        if (storedEnvironmentVariable) {
-            try {
-                const data = Array.isArray(storedEnvironmentVariable)
-                    ? storedEnvironmentVariable
-                    : Object.values(storedEnvironmentVariable);
-                setDataArray(data);
-            } catch (error) {
-                console.error('Failed to parse JSON data from local storage:', error);
-                setDataArray([]);
-            }
-        } else {
-            setDataArray([]);
-        }
-    };
-    useEffect(() => {
-        fetchDataFromLocalStorage();
-    }, []);
   return (
     <div className={classes.main}>
       <div>
@@ -40,30 +20,8 @@ function EnvironmentVariable() {
           </button>
         </span>
       </div>
-      {dataArray.length > 0 ? (
-        <table>
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Value</th>
-            </tr>
-          </thead>
-          <tbody>
-            {dataArray.map((item, index) => (
-              <tr key={index}>
-                <td>{item.name}</td>
-                <td>{item.value}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      ) : (
-        <span>No environment variables created.</span>
-      )}
-      <EnvironmentVariableUploadFile />
-      <EnvironmentVariableEdit />
+     <span>No Environment Variable created</span>
     </div>
   );
 }
-
 export default EnvironmentVariable;
