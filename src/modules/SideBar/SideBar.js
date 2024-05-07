@@ -9,13 +9,19 @@ import AdminIcon from '../../assets/AdminIcon.svg';
 import DocsIcon from '../../assets/DocsIcon.svg';
 import LeftArrowIcon from '../../assets/LeftArrowIcon.svg';
 
-const SideBar = () => {
-
+const SideBar = (props) => {
   return (
-    <div className={classes.main}>
+    <div className={props.isCollapsed ? classes.collapsed : classes.main}>
       <div>
-        <div className={classes.KapstanLogoContainer}>
-          <img src={KapstanLogo} alt="Kapstan-Logo" />
+        <div
+          onClick={() => props.setIsCollapsed(!props.isCollapsed)}
+          className={classes.KapstanLogoContainer}
+        >
+          <img
+            style={{ width: '32px', height: '32px' }}
+            src={KapstanLogo}
+            alt="Kapstan-Logo"
+          />
           <h2> Kapstan</h2>
         </div>
         <hr />
@@ -39,7 +45,7 @@ const SideBar = () => {
             <div>
               <img src={SecurityIcon} alt="Security-Icon" />
               <p>Security</p>
-              <p className={classes.Beta} >Beta</p>
+              <p className={classes.Beta}>Beta</p>
             </div>
           </div>
         </div>

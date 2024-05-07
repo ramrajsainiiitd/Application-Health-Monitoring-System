@@ -1,14 +1,26 @@
 .main {
-    display: flex;
-    width: 100vw;
-    height: 100vh;
-    background-color: #f8f8f8;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background-color: #f8f8f8;
 }
 
 .leftContainer {
-    width: 20%;
+  width: 20%;
 }
 
 .rightContainer {
-    width: 80%;
+  display: flex;
+  width: 80%;
+  justify-content: center;
+}
+
+.leftContainerCollapsed {
+  width: 6%;
+}
+
+.rightContainerCollapsed {
+  display: flex;
+  width: 94%;
+  justify-content: center;
 }

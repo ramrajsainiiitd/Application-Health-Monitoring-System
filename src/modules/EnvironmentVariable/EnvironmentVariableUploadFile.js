@@ -3,8 +3,8 @@ import { useState } from 'react';
 import classes from './EnvironmentVariableUploadFile.module.css';
 
 const EnvironmentVariableUploadFile = () => {
-  // const [fileName, setFileName] = useState('');
-  // const [pdfBase64, setPdfBase64] = useState(null);
+  const [fileName, setFileName] = useState('');
+  const [pdfBase64, setPdfBase64] = useState(null);
 
   // const [selectedFileName, setSelectedFileName] = useState(null);
   // const handleFileChange = (event) => {

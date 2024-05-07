@@ -22,7 +22,7 @@ function DropDown(props) {
         </select>
       </div>
       <div className={classes.profileImage}>
-        <img src={ProfileImage} alt="Profile-image" />
+        <img style={{width:'32px', height:'32px'}} src={ProfileImage} alt="Profile-image" />
         <p>John Deo</p>
         <img src={DownArrowIcon} alt="Down-Arrow-Icon" />
       </div>

@@ -3,6 +3,7 @@ import {useState, useEffect} from 'react'
 import classes from './EnvironmentVariable.module.css';
 import PlusIcon from '../../assets/PlusIcon.svg';
 import DownloadIcon from '../../assets/downloadIcon.svg';
+import Card from '../../Components/Card/Card';
 // import EnvironmentVariableUploadFile from './EnvironmentVariableUploadFile';
 // import EnvironmentVariableEdit from './EnvironmentVariableEdit';
 
@@ -21,6 +22,7 @@ function EnvironmentVariable() {
         </span>
       </div>
      <span>No Environment Variable created</span>
+     <Card/>
     </div>
   );
 }

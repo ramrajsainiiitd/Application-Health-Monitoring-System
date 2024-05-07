@@ -9,7 +9,7 @@ function Tab(props) {
   }
 
   return (
-    <div>
+    <div className={classes.main} >
       <div className={className} onClick={() => props.onClick(props.index)}>
         {props.src && <img src={props.src} alt={props.alt} />}
         <span>{props.label}</span>

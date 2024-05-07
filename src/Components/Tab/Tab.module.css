@@ -12,4 +12,6 @@
 
 .active {
   font-weight: 500;
+  color: #6e27d5;
+  text-decoration: underline;
 }

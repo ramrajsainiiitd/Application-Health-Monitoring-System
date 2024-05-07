@@ -3,7 +3,7 @@
   height: 100%;
   display: flex;
   justify-content: space-between;
-  border: 1px solid #ebebeb;
+  border-bottom: 0.1px solid #ebebeb;
 }
 .main {
   display: flex;
@@ -40,7 +40,7 @@
 .profileImage {
   display: flex;
   align-items: center;
-  width: Fixed (162px) px;
+  width:  px;
   height: Hug (40px) px;
   gap: 16px;
   padding: 16px 32px;

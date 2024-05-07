@@ -1,5 +1,4 @@
-import { useEffect } from 'react';
-// import SideNavBar from "../../Components/Navigation/SideNavBar";
+import React, { useEffect } from 'react';
 import MainPageContent from '../MainPageContent/MainPageContent';
 import classes from './MainPage.module.css';
 import {
@@ -13,21 +12,30 @@ import SideBar from '../SideBar/SideBar';
 import { useState } from 'react';
 
 const MainPage = () => {
+  const [isCollapsed, setIsCollapsed] = useState(false);
   const dispatch = useDispatch();
+
   useEffect(() => {
     getAllApplications(dispatch);
     getAllCpuUtilization(dispatch);
     getAllEventHistory(dispatch);
     getAllMemoryUtilization(dispatch);
-  }, []);
-  
-  console.log(window.loading);
+  }, [dispatch]);
+
   return (
     <div className={classes.main}>
-      <div className={classes.leftContainer}>
-        <SideBar />
+      <div
+        className={
+          isCollapsed ? classes.leftContainerCollapsed : classes.leftContainer
+        }
+      >
+        <SideBar isCollapsed={isCollapsed} setIsCollapsed={setIsCollapsed} />
       </div>
-      <div className={classes.rightContainer}>
+      <div
+        className={
+          isCollapsed ? classes.rightContainerCollapsed : classes.rightContainer
+        }
+      >
         <MainPageContent />
       </div>
     </div>
