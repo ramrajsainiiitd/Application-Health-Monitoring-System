@@ -2,32 +2,32 @@ import React, { useState } from 'react';
 import classes from './ContentHeader.module.css';
 import { useSelector } from 'react-redux';
 import Button from '../../Components/Button/Buttton';
-import SuccessfulStatusDot from '../../assets/SuccessfulStatusDot.svg';
-import ThreeDotDeployed from '../../assets/ThreeDotDeployed.svg';
-import OverviewIcon from '../../assets/OverviewIcon.svg';
-import EnvironmentVariableIcon from '../../assets/EnvironmentVariableIcon.svg';
-import AlertsIcon from '../../assets/AlertsIcon.svg';
-import EventHistoryIcon from '../../assets/EventHistoryIcon.svg';
+import successfulStatusDot from '../../assets/SuccessfulStatusDot.svg';
+import threeDotDeployed from '../../assets/ThreeDotDeployed.svg';
+import overviewIcon from '../../assets/OverviewIcon.svg';
+import environmentVariableIcon from '../../assets/EnvironmentVariableIcon.svg';
+import alertsIcon from '../../assets/AlertsIcon.svg';
+import eventHistoryIcon from '../../assets/EventHistoryIcon.svg';
 
 const tabs = [
   {
     label: 'Overview',
-    src: OverviewIcon,
+    src: overviewIcon,
     alt: 'Overview',
   },
   {
     label: 'Environment varialbles',
-    src: EnvironmentVariableIcon,
+    src: environmentVariableIcon,
     alt: 'Environment varialbles',
   },
   {
     label: 'Alerts',
-    src: AlertsIcon,
+    src: alertsIcon,
     alt: 'Alerts',
   },
   {
     label: 'Event History',
-    src: EventHistoryIcon,
+    src: eventHistoryIcon,
     alt: 'Event History',
   },
 ];
@@ -52,10 +52,10 @@ function ContentHeader(props) {
         <h3>{applicationName}</h3>
         <div>
           <span>
-            <img src={SuccessfulStatusDot} alt="Deployed Dot" />
+            <img src={successfulStatusDot} alt="Deployed Dot" />
             <p>{applicationStatus}</p>
           </span>
-          <img src={ThreeDotDeployed} alt="Three Dot" />
+          <img src={threeDotDeployed} alt="Three Dot" />
         </div>
       </div>
       <div className={classes.bottom}>

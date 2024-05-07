@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './Card.module.css';
-import DeleteIcon from '../../assets/DeleteIcon.svg';
+import deleteIcon from '../../assets/DeleteIcon.svg';
 
 const Card = () => {
   return (
@@ -16,7 +16,7 @@ const Card = () => {
             <input id="value" type="number" />
           </span>
           <button>
-            <img src={DeleteIcon} alt="Delete Icon" />
+            <img src={deleteIcon} alt="Delete Icon" />
           </button>
         </div>
       </form>

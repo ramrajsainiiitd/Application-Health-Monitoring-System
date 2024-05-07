@@ -1,8 +1,8 @@
 import React from 'react';
 import {useState, useEffect} from 'react'
 import classes from './EnvironmentVariable.module.css';
-import PlusIcon from '../../assets/PlusIcon.svg';
-import DownloadIcon from '../../assets/downloadIcon.svg';
+import plusIcon from '../../assets/PlusIcon.svg';
+import downloadIcon from '../../assets/downloadIcon.svg';
 import Card from '../../Components/Card/Card';
 // import EnvironmentVariableUploadFile from './EnvironmentVariableUploadFile';
 // import EnvironmentVariableEdit from './EnvironmentVariableEdit';
@@ -14,10 +14,10 @@ function EnvironmentVariable() {
         <h2>Environment variable</h2>
         <span>
           <button>
-            <img src={PlusIcon} alt="Plus Icon" />
+            <img src={plusIcon} alt="Plus Icon" />
           </button>
           <button>
-            <img src={DownloadIcon} alt="Download Icon" />
+            <img src={downloadIcon} alt="Download Icon" />
           </button>
         </span>
       </div>

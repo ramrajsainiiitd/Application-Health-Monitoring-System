@@ -1,6 +1,6 @@
 import classes from './DropDown.module.css';
-import ProfileImage from '../../assets/ProfileImage.svg'
-import DownArrowIcon from '../../assets/DownArrowIcon.svg'
+import profileImage from '../../assets/ProfileImage.svg'
+import downArrowIcon from '../../assets/DownArrowIcon.svg'
 
 function DropDown(props) {
   console.log(props);
@@ -22,9 +22,9 @@ function DropDown(props) {
         </select>
       </div>
       <div className={classes.profileImage}>
-        <img style={{width:'32px', height:'32px'}} src={ProfileImage} alt="Profile-image" />
+        <img style={{width:'32px', height:'32px'}} src={profileImage} alt="Profile-image" />
         <p>John Deo</p>
-        <img src={DownArrowIcon} alt="Down-Arrow-Icon" />
+        <img src={downArrowIcon} alt="Down-Arrow-Icon" />
       </div>
     </div>
   );

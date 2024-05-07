@@ -1,20 +1,20 @@
 import React from 'react';
-import Classes from './ServiceInfo.module.css';
-import UpsdideArrow from '../../assets/UpsideArrow.svg';
-import InSyncIcon from '../../assets/InSync.svg';
+import classes from './ServiceInfo.module.css';
+import upsdideArrow from '../../assets/UpsideArrow.svg';
+import inSyncIcon from '../../assets/InSync.svg';
 
 const ServiceInfo = () => {
   return (
-    <div className={Classes.mainContainer}>
+    <div className={classes.mainContainer}>
       <span>
         <h2>Service Info</h2>
-        <img src={UpsdideArrow} alt="Up side arrow" />
+        <img src={upsdideArrow} alt="Up side arrow" />
       </span>
-      <div className={Classes.main}>
+      <div className={classes.main}>
         <span>
           <p>Current version</p>
-          <div className={Classes.CurrentVersionStatus}>
-          <img src={InSyncIcon} alt="In Sync" />
+          <div className={classes.CurrentVersionStatus}>
+          <img src={inSyncIcon} alt="In Sync" />
           <p>In sync</p>
           </div>
         </span>
