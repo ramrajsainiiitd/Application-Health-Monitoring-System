@@ -1,6 +1,6 @@
 .main {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
   width: 50%vw;
   height: 100%vh;
   left: 50%vw;
@@ -18,4 +18,3 @@
   border: 1px 0px 0px 0px;
   opacity: 0px;
 }
-

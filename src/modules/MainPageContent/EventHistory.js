@@ -10,18 +10,13 @@ function EventHistory() {
     (state) => state.application.selectedApplicationId
   );
   const filteredEventHistroy = eventHistory.filter(
-    (val) => val.applicationId == selectedApplicationId
+    (val) => parseInt(val.applicationId) == parseInt(selectedApplicationId)
   );
   console.log(selectedApplicationId);
   console.log('Event History: ', filteredEventHistroy);
   const [dataSource, setDataSource] = useState(filteredEventHistroy);
   const [buttonState, setButtonState] = useState('View more');
-  const [eventStatus, setEventStatus] = useState({
-    in_progress: 'in_progress',
-    failed: 'failed',
-    successful: 'successful',
-  });
-
+  
   function clickHandler() {
     if (buttonState === 'View less') {
       setButtonState('View more');
