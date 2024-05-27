@@ -22,7 +22,7 @@ const SideBar = (props) => {
             src={kapstanLogo}
             alt="Kapstan-Logo"
           />
-          <h2> Kapstan</h2>
+          <h2>AppHealthGuard</h2>
         </div>
         <hr />
         <div className={classes.WorkspaceContainer}>

@@ -22,7 +22,6 @@ function EnvironmentVariable() {
         </span>
       </div>
      <span>No Environment Variable created</span>
-     <Card/>
     </div>
   );
 }
